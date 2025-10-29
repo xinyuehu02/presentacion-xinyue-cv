@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Xinyue Hu</title>
-  <meta name="description" content="Tarjeta digital de contacto: currículum, teléfono, email y LinkedIn de Alex Cheng." />
+  <meta name="description" content="Tarjeta digital de contacto: currículum, teléfono, email y LinkedIn de Xinyue Hu." />
 
   <style>
     :root{
@@ -56,7 +56,6 @@
       transform:translateY(-1px);
       box-shadow:0 6px 12px rgba(227,154,51,.15);
     }
-    footer{margin-top:20px;color:var(--muted);font-size:0.85rem}
     .icon{margin-right:8px}
     @media (prefers-color-scheme: dark){
       :root{--card:#151311; --text:#f7efe8; --muted:#cbb8a8; --bg1:#1e1a16; --bg2:#2a241f; --brand-2:#ffc078}
@@ -72,28 +71,32 @@
     <h1>Xinyue Hu</h1>
     <p>Acceso rápido a mi currículum y contacto</p>
 
-    <!-- 📄 Currículum -->
+    <!-- 📄 Currículum español -->
     <a class="btn" href="https://alex05ch.github.io/presentacion-xinyue/lorem-ipsum.pdf" target="_blank" rel="noopener">
-      📄 Ver mi currículum
+      📄 Ver mi currículum (Español)
+    </a>
+
+    <!-- 📄 Currículum inglés -->
+    <a class="btn" href="https://alex05ch.github.io/presentacion-xinyue/lorem-ipsum-en.pdf" target="_blank" rel="noopener">
+      📄 View my CV (English)
     </a>
 
     <!-- 📞 Teléfono -->
-    <a class="btn" href="tel:+34 625 970 372">📞 Llamar</a>
+    <a class="btn" href="tel:+34625970372">📞 Llamar</a>
 
     <!-- ✉️ Email -->
-    <a class="btn" href="mailto:xinyue.hu@gmail.com">✉️ Email</a>
+    <a class="btn" href="mailto:elenahu02@gmail.com">✉️ Email</a>
 
     <!-- 💼 LinkedIn -->
-    <a class="btn" href="https://www.linkedin.com/in/tuusuario" target="_blank" rel="noopener">💼 Mi LinkedIn</a>
+    <a class="btn" href="https://www.linkedin.com/in/xinyue-hu-809628213" target="_blank" rel="noopener">💼 Mi LinkedIn</a>
 
     <!-- 📇 Guardar contacto -->
-    <a class="btn" href="./contact.vcf" download>📇 Guardar contacto (.vcf)</a>
-
-    <footer>© <span id="y"></span> Alex Cheng</footer>
+    <a class="btn" href="./contact.vcf" download>📇 Guardar contacto</a>
   </main>
 
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
+    // Solo para mantener funcionalidad de año si la quieres mostrar en el futuro
+    document.getElementById('y')?.textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
