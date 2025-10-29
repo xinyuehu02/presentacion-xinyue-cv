@@ -3,12 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tarjeta de contacto | Alex Cheng</title>
-
-  <meta name="description" content="Accede a mi currículum, formas de contacto y LinkedIn desde una sola página." />
-  <meta property="og:title" content="Tarjeta digital de contacto" />
-  <meta property="og:description" content="Accede a mi currículum, formas de contacto y LinkedIn." />
-  <meta property="og:type" content="website" />
+  <title>Tarjeta digital | Alex Cheng</title>
+  <meta name="description" content="Tarjeta digital de contacto: currículum, teléfono, email y LinkedIn de Alex Cheng." />
 
   <style>
     :root{
@@ -21,152 +17,83 @@
       --muted:#6d5e53;
       --ring: rgba(227,154,51,.35);
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
+    *{box-sizing:border-box;margin:0;padding:0}
     body{
-      margin:0;
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, Inter, Arial, sans-serif;
       color:var(--text);
       background: radial-gradient(1200px 800px at 20% 10%, var(--bg2), var(--bg1));
-      display:grid;
-      place-items:center;
-      padding:24px;
+      display:flex;flex-direction:column;align-items:center;justify-content:center;
+      min-height:100vh;padding:20px;
     }
     .card{
-      width:min(520px, 100%);
       background:var(--card);
       border-radius:20px;
-      box-shadow:0 12px 30px rgba(0,0,0,.08);
-      padding:28px;
+      box-shadow:0 10px 25px rgba(0,0,0,.08);
+      padding:32px 24px;
+      max-width:400px;
+      width:100%;
+      text-align:center;
       border:1px solid rgba(0,0,0,.05);
     }
-    header{
-      display:flex;align-items:center;gap:16px;margin-bottom:14px;
-    }
-    .avatar{
-      width:60px;height:60px;border-radius:16px;
-      background:linear-gradient(145deg,#ffd9a8,#fff);
-      display:grid;place-items:center;font-size:28px;
-      border:1px solid rgba(0,0,0,.06);
-    }
-    h1{
-      font-size:1.35rem;line-height:1.2;margin:0;color:var(--brand-2);
-    }
-    p.subtitle{margin:.25rem 0 0;color:var(--muted);font-size:.95rem}
-    .hint{margin:.75rem 0 1.25rem;color:var(--muted);font-size:.9rem}
-
-    .actions{display:grid;gap:12px;margin-top:8px}
+    h1{color:var(--brand-2);font-size:1.5rem;margin-bottom:0.3rem}
+    p{color:var(--muted);margin-bottom:1.5rem}
     .btn{
-      appearance:none;border:0;cursor:pointer;
-      display:flex;align-items:center;justify-content:space-between;
-      padding:16px 18px;border-radius:14px;text-decoration:none;
-      background:#fff4e4;color:var(--text);font-weight:600;
+      display:block;
+      width:100%;
+      margin:10px 0;
+      padding:14px 18px;
+      background:#fff4e4;
       border:1px solid rgba(0,0,0,.06);
-      transition: transform .06s ease, background .2s ease, box-shadow .2s ease, border-color .2s ease;
+      border-radius:12px;
+      color:var(--text);
+      font-weight:600;
+      text-decoration:none;
+      transition:all .2s ease;
       box-shadow:0 4px 10px rgba(227,154,51,.08);
     }
-    .btn:hover{ transform: translateY(-1px); background:#ffedcf; box-shadow:0 8px 16px rgba(227,154,51,.14);}
-    .btn:focus{ outline:3px solid var(--ring); outline-offset:2px;}
-    .btn span{display:flex;align-items:center;gap:10px}
-    .btn small{color:var(--muted);font-weight:500}
-    .icon{font-size:1.35rem}
-    .chev{opacity:.6}
-
-    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:.85rem}
-    .note{margin-top:6px}
-    .brand{color:var(--brand-2);font-weight:700}
-
+    .btn:hover{
+      background:#ffedcf;
+      transform:translateY(-1px);
+      box-shadow:0 6px 12px rgba(227,154,51,.15);
+    }
+    footer{margin-top:20px;color:var(--muted);font-size:0.85rem}
+    .icon{margin-right:8px}
     @media (prefers-color-scheme: dark){
       :root{--card:#151311; --text:#f7efe8; --muted:#cbb8a8; --bg1:#1e1a16; --bg2:#2a241f; --brand-2:#ffc078}
       body{background: radial-gradient(1200px 800px at 20% 10%, #2a241f, #1e1a16);}
       .btn{background:#2a241f;border-color:#3a332c}
       .btn:hover{background:#3a332c}
       .card{border-color:#2d261f}
-      .avatar{border-color:#3a332c}
     }
   </style>
 </head>
 <body>
-  <main class="card" role="main" aria-labelledby="title">
-    <header>
-      <div class="avatar" aria-hidden="true">👋</div>
-      <div>
-        <h1 id="title">¡Hola! Soy <span class="brand">Alex Cheng</span></h1>
-        <p class="subtitle">Acceso rápido a mi CV, contacto y LinkedIn</p>
-      </div>
-    </header>
+  <main class="card">
+    <h1>Alex Cheng</h1>
+    <p>Acceso rápido a mi currículum y contacto</p>
 
-    <p class="hint">Selecciona una opción:</p>
+    <!-- 📄 Currículum -->
+    <a class="btn" href="https://alex05ch.github.io/presentacion-xinyue/lorem-ipsum.pdf" target="_blank" rel="noopener">
+      📄 Ver mi currículum
+    </a>
 
-    <nav class="actions" aria-label="Accesos principales">
-      <!-- ✅ CV directo desde GitHub Pages -->
-      <a class="btn" href="https://alex05ch.github.io/presentacion-xinyue/lorem-ipsum.pdf" target="_blank" rel="noopener">
-        <span><span class="icon" aria-hidden="true">📄</span> Ver mi currículum</span>
-        <small class="chev" aria-hidden="true">➜</small>
-      </a>
+    <!-- 📞 Teléfono -->
+    <a class="btn" href="tel:+34XXXXXXXXX">📞 Llamar</a>
 
-      <!-- Panel interactivo de contacto -->
-      <button class="btn" id="open-contact" type="button" aria-expanded="false" aria-controls="contact-panel">
-        <span><span class="icon" aria-hidden="true">📞</span> Formas de contacto</span>
-        <small class="chev" aria-hidden="true">➜</small>
-      </button>
+    <!-- ✉️ Email -->
+    <a class="btn" href="mailto:alexcheng@gmail.com?subject=Contacto&body=Hola%20Alex,">✉️ Email</a>
 
-      <div id="contact-panel" hidden style="margin-top:8px; display:grid; gap:10px;">
-        <a class="btn" href="tel:+34XXXXXXXXX">
-          <span><span class="icon" aria-hidden="true">📱</span> Llamar</span>
-          <small class="chev" aria-hidden="true">➜</small>
-        </a>
+    <!-- 💼 LinkedIn -->
+    <a class="btn" href="https://www.linkedin.com/in/tuusuario" target="_blank" rel="noopener">💼 Mi LinkedIn</a>
 
-        <a class="btn" href="https://wa.me/34XXXXXXXXX?text=Hola%20Alex%2C%20te%20contacto%20desde%20tu%20tarjeta%20digital" target="_blank" rel="noopener">
-          <span><span class="icon" aria-hidden="true">💬</span> WhatsApp</span>
-          <small class="chev" aria-hidden="true">➜</small>
-        </a>
+    <!-- 📇 Guardar contacto -->
+    <a class="btn" href="./contact.vcf" download>📇 Guardar contacto (.vcf)</a>
 
-        <a class="btn" href="mailto:alexcheng@gmail.com?subject=Contacto&body=Hola%20Alex%2C">
-          <span><span class="icon" aria-hidden="true">✉️</span> Email</span>
-          <small class="chev" aria-hidden="true">➜</small>
-        </a>
-
-        <a class="btn" href="sms:+34XXXXXXXXX">
-          <span><span class="icon" aria-hidden="true">📨</span> SMS</span>
-          <small class="chev" aria-hidden="true">➜</small>
-        </a>
-
-        <a class="btn" href="./contact.vcf" download>
-          <span><span class="icon" aria-hidden="true">📇</span> Guardar contacto (.vcf)</span>
-          <small class="chev" aria-hidden="true">⬇</small>
-        </a>
-      </div>
-
-      <!-- LinkedIn -->
-      <a class="btn" href="https://www.linkedin.com/in/tuusuario" target="_blank" rel="noopener">
-        <span><span class="icon" aria-hidden="true">💼</span> Mi LinkedIn</span>
-        <small class="chev" aria-hidden="true">➜</small>
-      </a>
-    </nav>
-
-    <footer>
-      <div class="note">© <span id="y"></span> Alex Cheng — Tarjeta digital</div>
-    </footer>
+    <footer>© <span id="y"></span> Alex Cheng</footer>
   </main>
 
   <script>
-    // Año automático
     document.getElementById('y').textContent = new Date().getFullYear();
-
-    // Desplegable de contacto
-    const btn = document.getElementById('open-contact');
-    const panel = document.getElementById('contact-panel');
-    btn?.addEventListener('click', () => {
-      const isHidden = panel.hasAttribute('hidden');
-      if (isHidden) {
-        panel.removeAttribute('hidden');
-        btn.setAttribute('aria-expanded', 'true');
-      } else {
-        panel.setAttribute('hidden', '');
-        btn.setAttribute('aria-expanded', 'false');
-      }
-    });
   </script>
 </body>
 </html>
